@@ -1,0 +1,45 @@
+.greeting   {
+    color: burlywood;
+}
+
+.header     {
+    background-color: orange;
+    height: 13%;
+    width: 100%;
+}
+
+.left-input     {
+    width: 43%;
+    height: 15%;
+    position: relative;
+    display: inline-block;
+    left: 5%;
+    margin-top: 2%;
+}
+.right-input     {
+    width: 43%;
+    height: 15%;
+    display: inline-block;
+    position: relative;
+    left: 8%;
+    margin-top: 2%;
+}
+
+.btn   {
+    position: relative;
+    margin-top: 10px;
+    left: 37%;
+}
+
+.meme-container    {
+    height: 40%;
+    width: 100%;
+}
+
+.top-text   {
+    text-align: center;
+}
+
+.bottom-text   {
+    text-align: center;
+}
