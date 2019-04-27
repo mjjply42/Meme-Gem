@@ -32,8 +32,8 @@
 }
 
 .meme-image {
-    height: 100%;
-    width: auto;
+    height: auto;
+    width: 100%;
     position: relative;
     left: auto;
     top: auto;
@@ -45,6 +45,7 @@
 }
 
 .meme-container    {
+    margin-top: 10px;
     background-color: red;
     height: 40%;
     width: 100%;
@@ -54,7 +55,7 @@
 .top-text   {
     transform: translateX(-50%);
     position: absolute;
-    margin-left: 220px;
+    margin-left: 250px;
     z-index: 1;
     font-family: impact, sans-serif;
     font-size: 2em;
@@ -76,8 +77,8 @@
 .bottom-text   {
     transform: translateX(-50%);
     position: absolute;
-    margin-left: 220px;
-    bottom: 0px;
+    margin-left: 250px;
+    top: 100%;
     z-index: 1;
     font-family: impact, sans-serif;
     font-size: 2em;
