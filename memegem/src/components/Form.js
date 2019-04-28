@@ -8,11 +8,16 @@ class Form extends Component   {
         this.state = {
             top: "",
             bottom: "",
+            memeArr: {},
             meme: ""
         }
         this.handleChange = this.handleChange.bind(this)
     }
-
+    componentDidMount() {
+        fetch('https://api.imgflip.com/get_memes')
+        .then(response => response.json())
+        .then(data => console.log(data))
+    }
     handleChange(event)
     {
         const { name, value } = event.target
@@ -23,7 +28,7 @@ class Form extends Component   {
 
     render()    {
         return (
-            <form className="form-container" autocomplete="off">
+            <form className="form-container" autoComplete="off">
                 <input className="form-control left-input" name="top" onChange={this.handleChange}/>
                 <input className="form-control right-input" name="bottom" onChange={this.handleChange}/>
                 <br />

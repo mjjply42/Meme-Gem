@@ -56,9 +56,10 @@
     transform: translateX(-50%);
     position: absolute;
     margin-left: 250px;
+    text-align: center;
     z-index: 1;
     font-family: impact, sans-serif;
-    font-size: 2em;
+    font-size: 1.4em;
     text-transform: uppercase;
     color: white;
     letter-spacing: 1px;
@@ -79,9 +80,10 @@
     position: absolute;
     margin-left: 250px;
     top: 100%;
+    text-align: center;
     z-index: 1;
     font-family: impact, sans-serif;
-    font-size: 2em;
+    font-size: 1.4em;
     text-transform: uppercase;
     color: white;
     letter-spacing: 1px;
