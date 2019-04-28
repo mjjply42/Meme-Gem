@@ -12,6 +12,7 @@ class Form extends Component   {
             meme: ""
         }
         this.handleChange = this.handleChange.bind(this)
+        this.changeMeme = this.changeMeme.bind(this)
     }
     componentDidMount() {
         fetch("https://api.imgflip.com/get_memes")
@@ -32,17 +33,26 @@ class Form extends Component   {
         })
     }
 
+    changeMeme(event)
+    {
+        event.preventDefault()
+        const rand_id = Math.floor(Math.random() * Math.floor(this.state.memeArr.length))
+        this.setState({meme: this.state.memeArr[rand_id].url})
+    }
+
     render()    {
         return (
             <form className="form-container" autoComplete="off">
                 <input className="form-control left-input" name="top" onChange={this.handleChange}/>
                 <input className="form-control right-input" name="bottom" onChange={this.handleChange}/>
                 <br />
-                <button type="button" className="btn btn-primary download" name="button">Save Meme!</button>
+                <button type="button" className="btn btn-primary download" onClick={this.changeMeme} name="button">Change Meme!</button>
                 <div className="meme-container">
-                    <h2 className="top-text">{this.state.top}</h2>
-                    <img className="meme-image"src={this.state.meme}></img>
-                    <h2 className="bottom-text">{this.state.bottom}</h2>
+                    <div className="size-container">
+                        <h2 className="top-text">{this.state.top}</h2>
+                        <img className="meme-image"src={this.state.meme}></img>
+                        <h2 className="bottom-text">{this.state.bottom}</h2>
+                    </div>
                 </div>
             </form>
         )

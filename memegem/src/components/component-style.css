@@ -1,11 +1,17 @@
 .greeting   {
-    color: burlywood;
+    color: white;
+    text-align: center;
+    margin-top: 15px;
 }
 
 .header     {
     background-color: orange;
     height: 13%;
     width: 100%;
+}
+
+.header h1  {
+    padding-top: 15px;
 }
 
 .left-input     {
@@ -28,12 +34,13 @@
 .btn   {
     position: relative;
     margin-top: 10px;
+    margin-bottom: 10px;
     left: 37%;
 }
 
 .meme-image {
-    height: 100%;
-    width: auto;
+    height: auto;
+    max-width: 100%;
     position: relative;
     left: auto;
     top: auto;
@@ -44,19 +51,27 @@
     height: 90%;
 }
 
+.size-container     {
+    margin-top: 10px;
+    margin: auto;
+    height: auto;
+    width: 85%;
+    position: relative;
+}
+
 .meme-container    {
     margin-top: 10px;
     margin: auto;
     height: 70%;
     width: 85%;
     position: relative;
-    overflow: auto
+    overflow: auto;
 }
 
 .top-text   {
     transform: translateX(-50%);
     position: absolute;
-    margin-left: 210px;
+    margin-left: 190px;
     text-align: center;
     z-index: 1;
     font-family: impact, sans-serif;
@@ -79,8 +94,8 @@
 .bottom-text   {
     transform: translateX(-50%);
     position: absolute;
-    margin-left: 210px;
-    bottom: 0;
+    margin-left: 190px;
+    bottom: 6px;
     text-align: center;
     z-index: 1;
     font-family: impact, sans-serif;
