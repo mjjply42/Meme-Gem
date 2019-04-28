@@ -19,7 +19,8 @@ class Form extends Component   {
             .then(response => {
                 const {memes} = response.data
                 this.setState({ memeArr: memes })
-                console.log(this.state.memeArr)
+                const rand_id = Math.floor(Math.random() * Math.floor(this.state.memeArr.length))
+                this.setState({meme: this.state.memeArr[rand_id].url})
             })
     }
 
@@ -40,7 +41,7 @@ class Form extends Component   {
                 <button type="button" className="btn btn-primary download" name="button">Save Meme!</button>
                 <div className="meme-container">
                     <h2 className="top-text">{this.state.top}</h2>
-                    <img className="meme-image"src={image}></img>
+                    <img className="meme-image"src={this.state.meme}></img>
                     <h2 className="bottom-text">{this.state.bottom}</h2>
                 </div>
             </form>
