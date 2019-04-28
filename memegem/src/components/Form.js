@@ -8,16 +8,21 @@ class Form extends Component   {
         this.state = {
             top: "",
             bottom: "",
-            memeArr: {},
+            memeArr: [],
             meme: ""
         }
         this.handleChange = this.handleChange.bind(this)
     }
     componentDidMount() {
-        fetch('https://api.imgflip.com/get_memes')
-        .then(response => response.json())
-        .then(data => console.log(data))
+        fetch("https://api.imgflip.com/get_memes")
+            .then(response => response.json())
+            .then(response => {
+                const {memes} = response.data
+                this.setState({ memeArr: memes })
+                console.log(this.state.memeArr)
+            })
     }
+
     handleChange(event)
     {
         const { name, value } = event.target
